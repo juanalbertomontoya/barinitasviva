@@ -93,6 +93,10 @@ a, a:focus, a:hover {
   outline: 0;
 }
 
+#homebanner {
+  height: 100vh !important;
+}
+
 .btn.active.focus,
 .btn.active:focus,
 .btn.focus,
