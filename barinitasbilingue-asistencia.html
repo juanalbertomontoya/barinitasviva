@@ -9,13 +9,25 @@
     <title>Control de Asistencia</title>
 </head>
 <body>
+    <!-- Popup de Contraseña -->
+    <div id="passwordPopup">
+        <div class="container col-md-4">
+            <h2>Ingrese la contraseña</h2>
+            <input type="password" id="passwordInput" class="form-control mb-3" placeholder="Contraseña" required>
+            <button id="accessBtn" class="btn btn-primary btn-block">Acceder</button>
+        </div>
+    </div>
+
+    <!-- Contenido de la página -->
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6 text-center">
+                <!-- Banner -->
                 <div class="banner">
-                    <img src="img/barinitasbilingue-banner.png" alt="Barinitas Bilingue Banner">
+                    <img src="img/barinitasbilingue-banner.png" alt="Barinitas Bilingue Banner" style="width: 100%; height: auto;">
                 </div>
                 <h2>Control de Asistencia</h2>
+                <h3>Barinitas Bilingue</h3>
                 <div id="reader" class="mx-auto mb-4" style="width: 100%; max-width: 300px;"></div>
                 <form id="dniForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeHAdC4uWo8BrVJNbmE_jj6tkxHzBQFBDxo8VPsITxpZz3lrQ/formResponse" method="post">
                     <div class="form-group">
