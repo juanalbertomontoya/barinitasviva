@@ -1,4 +1,3 @@
-
 document.getElementById('scanBtn').addEventListener('click', function () {
     let html5QrCode = new Html5Qrcode("reader");
     
