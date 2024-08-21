@@ -1,10 +1,7 @@
 document.getElementById('scanBtn').addEventListener('click', function () {
     let html5QrCode = new Html5Qrcode("reader");
     
-    const qrCodeSuccessCallback = (decodedText, decodedResult) => {
-        // Mostrar el valor escaneado en un alert
-        alert("Valor escaneado: " + decodedText);
-        
+    const qrCodeSuccessCallback = (decodedText, decodedResult) => {        
         // Insertar el valor escaneado en el input de DNI
         document.getElementById('dni').value = decodedText;
         

@@ -1,0 +1,47 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#reader {
+    margin-bottom: 25px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+/* Estilos personalizados para los encabezados */
+h2 {
+    margin-top: 1em;
+    font-size: 6vw;
+}
+
+
+@media (min-width: 768px) {
+    h2 {
+        font-size: 4vw;
+    }
+}
+
+@media (min-width: 992px) {
+    h2 {
+        font-size: 3vw;
+    }
+}
+
+
+/* Estilo para el banner */
+.banner img {
+    width: 100%;
+    height: auto; /* La altura se ajusta automáticamente en proporción al ancho */
+    display: block;
+    margin: 0 auto; /* Centrar la imagen */
+}

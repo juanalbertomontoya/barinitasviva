@@ -3,17 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escaneo de DNI</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Control de Asistencia</title>
 </head>
 <body>
-    <form id="dniForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeHAdC4uWo8BrVJNbmE_jj6tkxHzBQFBDxo8VPsITxpZz3lrQ/formResponse" method="post"">
-        <input type="text" id="dni" name="entry.1821725391" placeholder="Ingresa tu DNI" required>
-        <button type="button" id="scanBtn">Scan</button>
-        <button type="submit">Enviar</button>
-    </form>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center">
+                <div class="banner">
+                    <img src="img/barinitasbilingue-banner.png" alt="Barinitas Bilingue Banner">
+                </div>
+                <h2>Control de Asistencia</h2>
+                <div id="reader" class="mx-auto mb-4" style="width: 100%; max-width: 300px;"></div>
+                <form id="dniForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeHAdC4uWo8BrVJNbmE_jj6tkxHzBQFBDxo8VPsITxpZz3lrQ/formResponse" method="post">
+                    <div class="form-group">
+                        <input type="text" id="dni" name="entry.1821725391" class="form-control" placeholder="Ingresa tu Cédula" required>
+                    </div>
+                    <button type="button" id="scanBtn" class="btn btn-primary btn-block mb-2">Escanear</button>
+                    <button type="submit" class="btn btn-success btn-block">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
-    <div id="reader" style="width:300px;"></div>
-
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- HTML5 QR Code Scanner -->
     <script src="https://unpkg.com/html5-qrcode"></script>
     <script src="script.js"></script>
 </body>
