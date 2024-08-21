@@ -1,36 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Google Form</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f0f0f0;
-        }
-        .form-container {
-            width: 100%;
-            max-width: 800px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
-        }
-        iframe {
-            width: 100%;
-            border: none;
-        }
-    </style>
+    <title>Escaneo de DNI</title>
 </head>
 <body>
-    <div class="form-container">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeHAdC4uWo8BrVJNbmE_jj6tkxHzBQFBDxo8VPsITxpZz3lrQ/viewform?embedded=true" width="640" height="489" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </div>
+    <form id="dniForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeHAdC4uWo8BrVJNbmE_jj6tkxHzBQFBDxo8VPsITxpZz3lrQ/formResponse" method="post"">
+        <input type="text" id="dni" name="entry.1821725391" placeholder="Ingresa tu DNI" required>
+        <button type="button" id="scanBtn">Scan</button>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <div id="reader" style="width:300px;"></div>
+
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <script src="script.js"></script>
 </body>
 </html>
