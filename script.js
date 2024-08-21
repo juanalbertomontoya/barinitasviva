@@ -48,7 +48,7 @@ function getCookie(name) {
 
 document.getElementById('accessBtn').addEventListener('click', function () {
     const password = document.getElementById('passwordInput').value;
-    if (password === "987654321") {
+    if (password === "8141663.23038607") {
         setCookie("trustedDevice", "true", 365);
         document.getElementById('passwordPopup').style.display = 'none';
     } else {
@@ -63,3 +63,31 @@ window.onload = function() {
         document.getElementById('passwordPopup').style.display = 'flex';
     }
 };
+
+
+
+
+
+// Cookie de redirección
+
+
+function setRedirectCookie() {
+    document.cookie = "formSubmitted=true; path=/; max-age=600"; // Expira en 10 minutos
+}
+
+
+window.onload = function() {
+    if (document.referrer.includes("docs.google.com/forms") && getCookie("formSubmitted") === "true") {
+        // Redirige de vuelta a la página principal después de 2 segundos
+        setTimeout(function() {
+            window.location.href = "https://barinitasviva.com/barinitasbilingue-asistencia";
+        }, 2000);
+    }
+};
+
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+}
+
